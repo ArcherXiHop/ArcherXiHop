@@ -24,6 +24,7 @@ img {
  
 <body>
   <h1>Ciao World! - .innerhtml</h1>
+  <button onclick = "changeImage()">Press Me!</button>
   <a href = "https://github.com/ArcherXiHop/ArcherXiHop.github.io/blob/master/Eh/index.html">
   </a>
   
@@ -31,8 +32,10 @@ img {
  
   <p>Don't click on suspicous Links</p>
   <script>
-  var body = document.querySelector("body");
-  body.innerHTML = "sassy%20link.jpg";
+  function changeImage() {
+  var body = document.querySelector("img");
+  body.innerHTML = "<img src= 'sassy%20link.jpg'>";
+  }
 
   </script>
 
