@@ -2,6 +2,7 @@
 <html>
   <head>
   <title>Hiya! - Canvas</title>
+  <style>
   body {
   font-family: Comic Sans MS;
   color: #FCF369;
@@ -13,14 +14,16 @@ img {
   margin-left: -2em;
   margin-bottom: -1em;
   width: 20%;
-}    </head>
+} 
+    </style>
+    </head>
   <body>
     
     <br><canvas></canvas>
     <p>
       Here is something else in the page.
     </p>
-    <style>
+    <script>
     var canvas = document.querySelector("canvas");
 canvas.width = 500;
 canvas.height = 400;
@@ -41,6 +44,6 @@ ctx.beginPath();
 ctx.rect(60, 100, 150, 100);
 ctx.fillStyle = "orange";
 ctx.fill();
-</style>
+</script>
   </body>
 </html>
