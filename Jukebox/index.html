@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Jukebox - Canvas Extras</title>
+    <style>
+      body {
+  font-family: sans-serif;
+  color: #FBF5E3;
+  background: #002B36;
+  margin-left: 3em;
+}
+
+img {
+  margin-left: -2em;
+  margin-bottom: -1em;
+  width: 20%;
+}
+    </style>
+  </head>
+  <body>
+    <br><canvas></canvas>
+    <p>
+      Top of the morning to ya!
+    </p>
+    <script>
+      var canvas = document.querySelector("canvas");
+      canvas.width = 600;
+      canvas.height = 130;
+      var ctx = canvas.getContext("2d");
+      ctx.font = "bold 30px Papyrus"
+      
+      function drawRainbow(text,x,y) {
+        var colors = ["red", "goldenrod", "white", "black", "forestgreen", "magenta"]
+        for (i = 0; i < colors.length; i++){
+          ctx.fillStyle = colors[i];
+          ctx.fillText(text, x+ i * 3, y + i * 3)
+        }   
+      }
+      drawRainbow("Hiya there!", 10, 70);
+    </script>
+  </body>
+</html>
