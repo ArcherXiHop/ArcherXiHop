@@ -21,6 +21,8 @@ class Boot {
   class Begin {
     create() {
       console.log("Entered Beginning Stage");
+      this.background = this.add.tileSprite(0,0,320,568,"bg");
+      this.background.autoScroll(0,700);
     }
   }
 
