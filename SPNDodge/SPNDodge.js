@@ -4,7 +4,6 @@ class Boot {
     this.scale.pageAlignHorizontally = true;
     this.scale.pageAlignVertically = true;
   }
-
   create(){
     this.state.start("Generate")
   }
@@ -18,6 +17,7 @@ class Boot {
       console.log("All Done.");
     }
   }
+
 var game = new Phaser.Game(320,568);
 game.state.add("Boot",Boot);
 game.state.add("Generate",Generate);
