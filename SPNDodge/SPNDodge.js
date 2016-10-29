@@ -12,6 +12,7 @@ class Boot {
   class Generate {
     preload(){
       console.log("Generating...");
+      this.load.image("bg", "backgroundpotato.png")
     }
     create() {
       console.log("All Done.");
