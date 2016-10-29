@@ -1,3 +1,16 @@
+var C = {
+  "game": {
+    "width": 320,
+    "height": 568
+  },
+  "bg": {
+    "width": 320,
+    "height": 568,
+    "xspeed": 0,
+    "yspeed": 300,
+    "file": "backgroundpotato.png"
+  }
+}
 class Boot {
   preload(){
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -11,7 +24,8 @@ class Boot {
   class Generate {
     preload(){
       console.log("Generating...");
-      this.load.image("bg", "backgroundpotato.png");
+
+      this.load.image("bg",C.bg.file);
     }
     create() {
       console.log("All Done.");
@@ -21,12 +35,12 @@ class Boot {
   class Begin {
     create() {
       console.log("Entered Beginning Stage");
-      this.background = this.add.tileSprite(0,0,320,568,"bg");
-      this.background.autoScroll(0,300);
+      this.background = this.add.tileSprite(0,0,C.bg.height,"bg");
+      this.background.autoScroll(C.bg.xspeed,C.bg.yspeed);
     }
   }
 
-var game = new Phaser.Game(320,568);
+var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",Boot);
 game.state.add("Generate",Generate);
 game.state.add("Begin",Begin);
