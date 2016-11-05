@@ -31,7 +31,7 @@ class Boot {
     preload(){
       console.log("Generating...");
       this.load.image("bg",C.bg.file);
-      this.load.spritesheet("runner",C.p.file,C.p.width, C.p.height,C.p.frames)
+      this.load.spritesheet("p",C.p.file,C.p.width, C.p.height,C.p.frames)
     }
     create() {
       console.log("All Done.");
