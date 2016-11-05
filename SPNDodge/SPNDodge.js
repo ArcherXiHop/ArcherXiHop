@@ -10,6 +10,12 @@ var C = {
     "yspeed": 300,
     "file": "backgroundpotato.png"
   }
+  "p": {
+    "file":"dodgesprite.png",
+    "width": 60,
+    "height": 75,
+    "frames": 4
+  }
 }
 class Boot {
   preload(){
@@ -24,8 +30,8 @@ class Boot {
   class Generate {
     preload(){
       console.log("Generating...");
-
       this.load.image("bg",C.bg.file);
+      this.load.spritesheet("runner",C.p.file,C.p.width, C.p.height,C.p.frames)
     }
     create() {
       console.log("All Done.");
