@@ -9,7 +9,7 @@ var C = {
     "xspeed": 0,
     "yspeed": 300,
     "file": "backgroundpotato.png"
-  }
+  },
   "p": {
     "file":"dodgesprite.png",
     "width": 60,
