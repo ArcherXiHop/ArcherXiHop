@@ -18,7 +18,7 @@ var C = {
     "fps": 4,
     "startx": 160,
     "starty": 500
-  }
+  },
   "a": {
   "file": "anxiety.png",
   "width": 50,
