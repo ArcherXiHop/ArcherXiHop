@@ -15,6 +15,7 @@ var C = {
     "width": 60,
     "height": 75,
     "frames": 4,
+    "fps": 4,
     "startx": 160,
     "starty": 500
   }
@@ -51,6 +52,8 @@ class Boot {
       this.dodger.anchor.set(0.5,0.5);
       this.dodger.smoothed = false;
       this.dodger.scale.set(1);
+      this.dodger.animations.add("anim");
+      this.dodger.animations.play("anim",C.p.fps,true);
     }
   }
   function restart() {
