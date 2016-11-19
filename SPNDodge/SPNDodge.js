@@ -73,6 +73,9 @@ class Boot {
       this.anxiety.animations.play("anim",C.a.fps,true);
     }
   }
+  update(){
+  console.log("Play.update() called.");
+  }
   function restart() {
   game.state.start("Boot")
   }
