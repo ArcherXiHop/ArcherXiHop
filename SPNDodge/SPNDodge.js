@@ -19,6 +19,15 @@ var C = {
     "startx": 160,
     "starty": 500
   }
+  "a": {
+  "file": "anxiety.png",
+  "width": 50,
+  "height": 65,
+  "frames": 4,
+  "fps": 10,
+  "startx": 160,
+  "starty": 32
+  }
 }
 class Boot {
   preload(){
@@ -34,7 +43,8 @@ class Boot {
     preload(){
       console.log("Generating...");
       this.load.image("bg",C.bg.file);
-      this.load.spritesheet("dodger",C.p.file,C.p.width, C.p.height,C.p.frames)
+      this.load.spritesheet("dodger",C.p.file,C.p.width, C.p.height,C.p.frames);
+      this.load.spritesheet("anxiety",C.a.file,C.a.width,C.a.height,C.a.frames);
     }
     create() {
       console.log("All Done.");
@@ -54,6 +64,13 @@ class Boot {
       this.dodger.scale.set(1);
       this.dodger.animations.add("anim");
       this.dodger.animations.play("anim",C.p.fps,true);
+
+      this.anxiety = this.add.sprite(C.a.startx,C.a.starty,"anxiety");
+      this.anxiety.anchor.set(0.5,0.5);
+      this.anxiety.smoothed = false;
+      this.anxiety.scale.set(1);
+      this.anxiety.animations.add("anim");
+      this.anxiety.animations.play("anim",C.a.fps,true);
     }
   }
   function restart() {
