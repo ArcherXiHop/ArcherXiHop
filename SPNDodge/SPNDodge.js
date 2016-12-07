@@ -84,6 +84,9 @@ class Boot {
       this.dodger.x += C.p.speed;
     }
 
+    if (this.anxiety.y > this.game.height) {
+      this.anxiety.y = C.a.starty
+    }
     this.anxiety.y += C.a.speed;
   }
 
