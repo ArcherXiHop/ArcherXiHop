@@ -41,7 +41,7 @@ class Boot {
 }
   class Generate {
     preload(){
-      iconsole.log("Generating...");
+      console.log("Generating...");
       this.load.image("bg",C.bg.file);
       this.load.spritesheet("dodger",C.p.file,C.p.width, C.p.height,C.p.frames);
       this.load.spritesheet("anxiety",C.a.file,C.a.width,C.a.height,C.a.frames);
