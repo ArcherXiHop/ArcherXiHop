@@ -27,7 +27,8 @@ var C = {
   "frames": 4,
   "fps": 10,
   "startx": 160,
-  "starty": 32
+  "starty": 32,
+  "speed": 40
   }
 }
 class Boot {
@@ -82,6 +83,8 @@ class Boot {
     } if (this.cursors.right.isDown) {
       this.dodger.x += C.p.speed;
     }
+
+    this.doge.y += C.a.speed;
   }
 
   render(){
