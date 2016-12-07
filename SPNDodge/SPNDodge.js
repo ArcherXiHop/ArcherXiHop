@@ -17,7 +17,8 @@ var C = {
     "frames": 4,
     "fps": 4,
     "startx": 160,
-    "starty": 500
+    "starty": 500,
+    "speed":  10
   },
   "a": {
   "file": "anxiety.png",
