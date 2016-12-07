@@ -28,7 +28,7 @@ var C = {
   "fps": 10,
   "startx": 160,
   "starty": 32,
-  "speed": 40
+  "speed": 28
   }
 }
 class Boot {
