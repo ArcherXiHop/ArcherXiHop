@@ -84,7 +84,7 @@ class Boot {
       this.dodger.x += C.p.speed;
     }
 
-    this.doge.y += C.a.speed;
+    this.anxiety.y += C.a.speed;
   }
 
   render(){
