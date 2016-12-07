@@ -85,7 +85,7 @@ class Boot {
   }
 
   render(){
-  game.debug.text("x: " + this.dodge.x + ", y: " + this.dodge.y, 4, 16);
+    game.debug.text("x: " + this.anxiety.x + ", y: " + this.anxiety.y, 4, 16);
   }
   }
   function restart() {
