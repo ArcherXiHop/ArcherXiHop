@@ -41,7 +41,7 @@ class Boot {
 }
   class Generate {
     preload(){
-      console.log("Generating...");
+      iconsole.log("Generating...");
       this.load.image("bg",C.bg.file);
       this.load.spritesheet("dodger",C.p.file,C.p.width, C.p.height,C.p.frames);
       this.load.spritesheet("anxiety",C.a.file,C.a.width,C.a.height,C.a.frames);
@@ -71,10 +71,16 @@ class Boot {
       this.anxiety.scale.set(1);
       this.anxiety.animations.add("anim");
       this.anxiety.animations.play("anim",C.a.fps,true);
+
+      this.cursors = this.input.keyboard.createCursorKeys();
     }
   
   update(){
-  console.log("Play.update() called.");
+    if (this.cursors.left.isDown){
+      this.dodger.x -= C.p.speed;
+    } if (this.cursors.right.isDown) {
+      this.dodger.x += C.p.speed;
+    }
   }
   }
   function restart() {
