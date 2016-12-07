@@ -83,6 +83,10 @@ class Boot {
       this.dodger.x += C.p.speed;
     }
   }
+
+  render(){
+  game.debug.text("x: " + this.dodge.x + ", y: " + this.dodge.y, 4, 16);
+  }
   }
   function restart() {
   game.state.start("Boot")
