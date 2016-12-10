@@ -85,7 +85,14 @@ class Boot {
     }
 
     if (this.anxiety.y > this.game.height) {
-      this.anxiety.y = C.a.starty
+      this.anxiety.y = C.a.starty;
+      let px = (C.a.width * this.anxiety.scale.x) / 2;
+      let max = C.game.width - px
+      let min = 0 + px
+      let newx = randInt(max);
+      if (newx < min){ newx = min}
+      this.anxiety.x = newx
+
     }
     this.anxiety.y += C.a.speed;
   }
