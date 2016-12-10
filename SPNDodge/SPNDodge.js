@@ -88,10 +88,7 @@ class Boot {
       this.anxiety.y = C.a.starty;
       let px = (C.a.width * this.anxiety.scale.x) / 2;
       let max = C.game.width - px
-      let min = 0 + px
-      let newx = randInt(max);
-      if (newx < min){ newx = min}
-      this.anxiety.x = newx
+      this.anxiety.x = randInt(px,max);
 
     }
     this.anxiety.y += C.a.speed;
@@ -106,7 +103,7 @@ class Boot {
   }
 
   function randInt(max){
-    return Math.floor(Math.random() * max);
+    return Math.floor(Math.random() * (max- min) + min);
   }
 
 var game = new Phaser.Game(C.game.width,C.game.height);
