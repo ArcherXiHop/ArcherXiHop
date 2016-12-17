@@ -91,6 +91,9 @@ class Boot {
       this.anxiety.x = randInt(px,max);
 
     }
+    if (checkOverlap(this.dodger, this.anxiety)) {
+      restart();
+   }
     this.anxiety.y += C.a.speed;
   }
 
@@ -104,6 +107,12 @@ class Boot {
 
   function randInt(min,max){
     return Math.floor(Math.random() * (max- min) + min);
+  }
+  function checkOverlap(spriteA, spriteB) {
+    var boundsA = spriteA.getBounds();
+    var boundsB = spriteB.getBounds();
+    return Phaser.Rectangle.intersects(boundsA, boundsB);
+
   }
 
 var game = new Phaser.Game(C.game.width,C.game.height);
